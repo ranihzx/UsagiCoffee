@@ -1,16 +1,62 @@
-# React + Vite
+# ☕ Usagi Coffee — Menu App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um aplicativo simples e elegante para visualizar, adicionar, atualizar e excluir itens de um cardápio kawaii. Desenvolvido em **React + Vite**, com backend fornecido pelo **Supabase**, que funciona como um serviço real de banco de dados e API.
 
-Currently, two official plugins are available:
+## ✨ Funcionalidades
+- Visualizar itens do menu (bebidas e comidas)  
+- Buscar itens por nome  
+- Adicionar novos itens  
+- Atualizar itens existentes  
+- Excluir itens do cardápio  
+- Integração completa com banco de dados Supabase
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tecnologias utilizadas
+- **React**  
+- **Vite**  
+- **Supabase (API + banco de dados)**  
+- **CSS**
 
-## React Compiler
+## 📦 Como executar o projeto
+1. Instalar dependências:  
+   ```bash
+   npm install
+   ```
+2. Rodar localmente:  
+   ```bash
+   npm run dev
+   ```
+3. Fazer build para produção:  
+   ```bash
+   npm run build
+   ```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🌐 Deploy no GitHub Pages
+O deploy foi configurado utilizando:  
+- `vite.config.js` com caminho base ajustado  
+- Arquivos da pasta **dist/** enviados ao branch `gh-pages`  
+- Projeto acessível via GitHub Pages
 
-## Expanding the ESLint configuration
+## 🗄️ Sobre a API
+O projeto utiliza o **Supabase** para operações de:
+- Inserção  
+- Consulta  
+- Atualização  
+- Exclusão  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Ou seja, o Supabase serve como a **API REST real** do projeto.
+
+## 📁 Estrutura do projeto
+```
+src/
+ ├── assets/
+ ├── Home.jsx
+ ├── main.jsx
+ └── supabaseClient.js
+```
+
+## 🐇 Estilo
+Tema visual inspirado em cafés kawaii, com cores suaves, bordas arredondadas e apresentação minimalista.
+
+---
+
+Desenvolvido com carinho 🌸
