@@ -14,14 +14,17 @@
 }
 
 .screen {
-    height: 100vh;
     background-color: var(--branco-escuro);
     font-family: "QilkaBold", sans-serif;
-
+    color: var(--rosa);
 }
 
 header {
     background-color: var(--rosa);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
 }
 
 header img {
@@ -29,7 +32,6 @@ header img {
 }
 
 h2 {
-    font-size: 25px;
     margin: 0 0 25px;
 }
 
@@ -42,6 +44,7 @@ h2 {
     display: flex;
     justify-content: space-between;
     margin: 70px;
+    margin-top: 120px;
     gap: 50px;
 }
 
@@ -53,11 +56,11 @@ h2 {
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
     padding: 25px;
     text-align: center;
-    height: 65vh;
+    overflow: hidden;
 }
 
 main {
-    flex: 1;
+    width: calc(100% - 430px); 
 }
 
 .title {
@@ -69,6 +72,11 @@ main {
 
 h2 {
     margin: 0;
+    color: var(--rosa);
+}
+
+input {
+    width: 260px;
 }
 
 input, select, .select {
@@ -106,6 +114,10 @@ input:focus, select:focus {
     padding-right: 40px;
 }
 
+.seachBar::placeholder {
+    opacity: 0.8;
+}
+
 .seach {
     position: absolute;
     width: 15px;
@@ -119,10 +131,18 @@ h3 {
     color: var(--branco);
     background-color: var(--rosa);
     padding: 6px;
+    margin: 25px 0 0;
+    
+}
+
+aside {
+    position: fixed;
+    right: 70px;
+    width: 280px;
+    height: 65vh;
 }
 
 aside h2 {
-    color: var(--vermelho);
     margin-bottom: 25px;
 }
 
@@ -170,3 +190,45 @@ input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    flex-basis: 50%;
+    color: var(--vermelho);
+}
+
+li:nth-child(odd) {
+  background-color: var(--rosa-bem-claro);
+}
+
+li:nth-child(even) {
+  background-color: var(--branco);
+}
+
+.selected {
+  background-color: var(--vermelho) !important;
+  color: var(--branco);
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.text {
+    color: var(--vermelho);
+}
+
+.Modo {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 100%;
+    flex-direction: column;
+}
+
