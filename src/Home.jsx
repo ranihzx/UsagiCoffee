@@ -171,18 +171,35 @@ function Home() {
                   <input
                     className="AsideFields"
                     type="text"
+                    maxLength={32}
                     placeholder="Nome"
                     value={item.nome}
                     onChange={(e) => setItem({ ...item, nome: e.target.value })}
                   />
                   <input
                     className="AsideFields"
+                    min={0}
+                    max={999}
                     type="number"
                     placeholder="Preço"
                     value={item.preco}
-                    onChange={(e) =>
-                      setItem({ ...item, preco: parseFloat(e.target.value) })
-                    }
+                    onChange={(e) => {
+                      const val = e.target.value;
+                    
+                      if (val === "") {
+                        setItem({ ...item, preco: "" });
+                        return;
+                      }
+
+                      const regex = /^\d*\.?\d{0,2}$/;
+
+                      if (regex.test(val)) {
+                        const num = parseFloat(val);
+                        if (!isNaN(num) && num >= 0 && num <= 1000) {
+                          setItem({ ...item, preco: num });
+                        }
+                      }
+                    }}
                   />
                 </div>
 
@@ -265,16 +282,35 @@ function Home() {
                   <input
                     className="AsideFields"
                     type="text"
+                    maxLength={32}
                     placeholder="Nome"
                     value={item.nome}
                     onChange={(e) => setItem({ ...item, nome: e.target.value })}
                   />
                   <input
                     className="AsideFields"
+                    min={0}
+                    max={999}
                     type="number"
                     placeholder="Preço"
                     value={item.preco}
-                    onChange={(e) => setItem({ ...item, preco: parseFloat(e.target.value) })}
+                    onChange={(e) => {
+                      const val = e.target.value;
+                    
+                      if (val === "") {
+                        setItem({ ...item, preco: "" });
+                        return;
+                      }
+
+                      const regex = /^\d*\.?\d{0,2}$/;
+
+                      if (regex.test(val)) {
+                        const num = parseFloat(val);
+                        if (!isNaN(num) && num >= 0 && num <= 1000) {
+                          setItem({ ...item, preco: num });
+                        }
+                      }
+                    }}
                   />
                 </div>
 
