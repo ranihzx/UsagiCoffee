@@ -56,7 +56,3 @@ src/
 
 ## 🐇 Estilo
 Tema visual inspirado em cafés kawaii, com cores suaves, bordas arredondadas e apresentação minimalista.
-
----
-
-Desenvolvido com carinho 🌸
